@@ -1,0 +1,37 @@
+{% include "header.html" %}
+<body>
+    
+    <div id="wrapper">
+        <div id="header">
+            <br>
+            <p><a href="{{url_for('home')}}" class="homelink">Christos B - Projects</a></p>
+        </div>
+        
+        <div id="nav">
+            <a href="{{url_for('home')}}" class="topnav">Projects</a>
+            <a href="contact.html" class="topnav">About</a>
+            <a href="news.html" class="topnav">FAQ</a>
+        </div>
+        <div id="middle">
+            <h1>Chessbot</h1>
+                <h2>Take a break,
+                    this counts as work&#x1F609; </h2>
+            <p>
+            Play chess against Fritz one of the most iconic Chess AI
+            </p>
+            
+            <br><br>
+            <div class="iframe-container">
+               <iframe src="https://fritz.chessbase.com?pos=wKe3,Re4/bKd5"  </iframe>
+            </div>
+            
+            <br>
+            <p>Simply drag and drop the piece you want to move.<br>
+            If you want to start a new game reload the page.</p>
+        </div>
+        
+
+
+    </div>
+    <br>
+{% include "footer.html" %}
