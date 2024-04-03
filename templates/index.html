@@ -1,65 +1,246 @@
-{% include "header.html" %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+		<!-- Setting the metadata    -->
+		<meta charset="utf-8" />
+		<meta name="author" content="Christos Bekiarian"/>
+		<meta name="description" content="Personal portofolio website" />
+		<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<!-- Linking the CSS and icon    -->
+		<title> Bekiarian Portofolio</title>
+		<link rel="stylesheet" type="text/css" href="/static/css/styles.css" />
+		<link rel="tab icon"  type="image/x-icon"  href="/static/assets/favicon.ico"/>
+		
+	</head>
 
-<!-- Page Header-->
-<header
-  class="masthead"
-  style="background-image: url('../static/assets/img/home-bg.jpg')"
->
-  <div class="container position-relative px-4 px-lg-5">
-    <div class="row gx-4 gx-lg-5 justify-content-center">
-      <div class="col-md-10 col-lg-8 col-xl-7">
-        <div class="site-heading">
-          <h1>Angela's Blog</h1>
-          <span class="subheading">A collection of random musings.</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-<!-- Main Content-->
-<div class="container px-4 px-lg-5">
-  <div class="row gx-4 gx-lg-5 justify-content-center">
-    <div class="col-md-10 col-lg-8 col-xl-7">
-      <!-- Post preview-->
-      {% for post in all_posts %}
-      <div class="post-preview">
-        <a href="{{ url_for('show_post', post_id=post.id) }}">
-          <h2 class="post-title">{{ post.title }}</h2>
-          <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-        </a>
-        <p class="post-meta">
-          Posted by
-          <!-- post.author.name is now a User object -->
-          <a href="#">{{post.author.name}}</a>
-          on {{post.date}}
-          <!-- Only show delete button if user id is 1 (admin user) -->
-          {% if current_user.id == 1: %}
-          <a href="{{url_for('delete_post', post_id=post.id) }}">✘</a>
-          {% endif %}
-        </p>
-      </div>
-      <!-- Divider-->
-      <hr class="my-4" />
-      {% endfor %}
-
-      <!-- New Post -->
-      <!-- Only show Create Post button if user id is 1 (admin user) -->
-      {% if current_user.id == 1: %}
-      <div class="d-flex justify-content-end mb-4">
-        <a
-          class="btn btn-primary float-right"
-          href="{{url_for('add_new_post')}}"
-          >Create New Post</a
-        >
-      </div>
-      {% endif %}
-
-      <!-- Pager-->
-      <div class="d-flex justify-content-end mb-4">
-        <a class="btn btn-secondary text-uppercase" href="#!">Older Posts →</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-{% include "footer.html" %}
+    <!-- Body content begins  -->
+	<body>
+		<!-- Wrapper that contains the whole website -->
+		<div id="wrapper">
+			<!--Contains the image and tagline -->
+			<div id="header">
+				<br>
+				<!-- Profile Image	-->
+				<img src="/static/assets/images/profile_pic.png" id="grow" width="150" style="border-radius: 50%">
+				<br>
+				<!-- Tagline -->
+				<p>Christos Bekiarian is a Greek software engineer
+					<br>On a journey from fresh Grad to
+					<br>Code Maven with a simple goal
+					<br>Build Tomorrow's Solutions Today
+				</p>
+			</div>
+			<br>
+			<!-- Nav bar -->
+			<div id="nav">
+				<a href="illustration.html" class="onpage">Projects</a>
+				<a href="design.html" class="topnav">About</a>
+				<a href="contact.html" class="topnav">FAQ</a>
+			</div>
+			<!-- First column -->
+			<div id="c1">
+		
+				<div class="fart  idle"  >
+					<a href="audrey.html"><img class="lil" data-original="/static/assets/images/audthumb.jpg" src="/static/assets/images/project_thumbnails/audthumb.jpg" style="display: inline;">
+					<span class="arrow">AUDREY</span></a>
+				</div>
+		
+				<div class="fart john">
+					<a href="audrey.html"><img class="lil" data-original="/static/assets/images/slthumb.jpg" src="/static/assets/images/project_thumbnails/slthumb.jpg" style="display: inline;">
+					<span class="arrow">SLUG MAGAZINE</span></a>
+				</div>
+		
+				<div class="fart  idle" >
+					<a href="fortune.html"><img class="lil" src="/static/assets/images/project_thumbnails/fmthumb.gif">
+					<span class="arrow">FORTUNE MAGAZINE</span></a>
+				</div>
+		
+				<div class="fart john" >
+					<a href="investor.html"><img class="lil" src="/static/assets/images/project_thumbnails/iithumb.jpg">
+					<span class="arrow">INSTITUTIONAL INVESTOR</span></a>
+				</div>
+		
+				<div class="fart john" >
+					<a href="fp.html"><img class="lil" src="/static/assets/images/project_thumbnails/tpthumb2.jpg">
+					<span class="arrow">FINANCIAL POST</span></a>
+				</div>
+		
+				<div class="fart john" >
+					<a href="contently.html"><img class="lil" src="/static/assets/images/project_thumbnails/ctthumb.jpg">
+					<span class="arrow">CONTENTLY</span></a>
+				</div>
+		
+				<div class="fart john" >
+					<a href="chariots.html"><img class="lil" src="/static/assets/images/project_thumbnails/cohthumb.jpg">
+					<span class="arrow">CHARRIOTS OF HOPE</span></a>
+				</div>
+		
+				<div class="fart john" >
+					<a href="monocle2.html"><img class="lil" src="/static/assets/images/project_thumbnails/mcthumb.jpg">
+					<span class="arrow">MONOCLE 86</span></a>
+				</div>
+			</div>
+			
+			<!-- Second column -->
+			<div id="c2">
+		
+				<div class="fart john" >
+					<a href="iron.html"><img class="lil" src="/static/assets/images/project_thumbnails/ironthumb.jpg">
+					<span class="arrow">IRONMAN</span></a>
+				</div>
+		
+				<div class="fart idle" >
+					<a href="peach.html"><img class="lil" src="/static/assets/images/project_thumbnails/peachthumb.jpg">
+					<span class="arrow">PEACHY</span></a>
+				</div>
+		
+		
+				<div class="fart john" >
+					<a href="pride.html"><img class="lil" src="/static/assets/images/project_thumbnails/pridethumb.jpg">
+					<span class="arrow">PRIDE</span></a>
+				</div>
+				
+				<div class="fart john" >
+					<a href="thinkers.html"><img class="lil" src="/static/assets/images/project_thumbnails/phthumb.gif">
+					<span class="arrow">THINKERS</span></a>
+				</div>
+		
+				<div class="fart john" >
+					<a href="pennlaw.html"><img class="lil" src="/static/assets/images/project_thumbnails/bithumb2.jpg">
+					<span class="arrow">PENN LAW JOURNAL</span></a>
+				</div>
+		
+				<div class="fart john" >
+					<a href="literary.html"><img class="lil" src="/static/assets/images/project_thumbnails/llthumb2.jpg">
+					<span class="arrow">COASTAL LIVING</span></a>
+				</div>
+		
+				<div class="fart john" >
+					<a href="atlanta.html"><img class="lil" src="/static/assets/images/project_thumbnails/rrthumb.gif">
+					<span class="arrow">ATLANTA MAGAZINE</span></a>
+				</div>
+		
+				<div class="fart john" >
+					<a href="rockefeller.html"><img class="lil" src="/static/assets/images/project_thumbnails/rfthumb.jpg">
+					<span class="arrow">ROCKEFELLER U.</span></a>
+				</div>
+			</div>
+			
+	
+			<!-- Third column -->
+			<div id="c3">
+				<div class="fart john" >
+					<a href="heart.html"><img class="lil" src="/static/assets/images/project_thumbnails/heartthumb.jpg">
+					<span class="arrow">MY HEART</span></a>
+				</div>
+		
+				<div class="fart john" >
+					<a href="holy.html"><img class="lil" src="/static/assets/images/project_thumbnails/holythumb.jpg">
+					<span class="arrow">HOLY RELICS</span></a>
+				</div>
+		
+				<div class="fart john" >
+					<a href="localized.html"><img class="lil" src="/static/assets/images/project_thumbnails/slugthumb.jpg">
+					<span class="arrow">LOCALIZED</span></a>
+				</div>
+		
+				<div class="fart john" >
+					<a href="byumap.html"><img class="lil" src="/static/assets/images/project_thumbnails/bymt2.jpg">
+					<span class="arrow">BYU MAGAZINE</span></a>
+				</div>
+		
+				<div class="fart john" >
+					<a href="ccm.html"><img class="lil" src="/static/assets/images/project_thumbnails/ccmthumb.jpg">
+					<span class="arrow">CARD CONNECT MURAL</span></a>
+				</div>
+		
+		
+				<div class="fart john" >
+					<a href="portraits.html"><img class="lil" src="/static/assets/images/project_thumbnails/alexthumb2.jpg">
+					<span class="arrow">PORTRAITS</span></a>
+				</div>
+		
+				<div class="fart john" >
+					<a href="wallstreetjournal.html"><img class="lil" src="/static/assets/images/project_thumbnails/wsthumb.jpg">
+					<span class="arrow">WALLSTREET JOURNAL</span></a>
+				</div>
+		
+				<div class="fart john" >
+					<a href="mural2.html"><img class="lil" src="/static/assets/images/project_thumbnails/bmthumb.jpg">
+					<span class="arrow">SPIRIT MURAL</span></a>
+				</div>
+	
+			</div>
+			
+			<!-- Fourth column -->
+			<div id="c4">
+				
+				<div class="fart john" >
+					<a href="threepio.html"><img class="lil" src="/static/assets/images/project_thumbnails/3p0thumb.jpg">
+					<span class="arrow">THREEPIO</span></a>
+				</div>
+			
+				<div class="fart john" >
+					<a href="grizzly.html"><img class="lil" src="/static/assets/images/project_thumbnails/bearthumb.jpg">
+					<span class="arrow">GRIZZLY</span></a>
+				</div>
+		
+				<div class="fart john" >
+					<a href="how.html"><img class="lil" src="/static/assets/images/project_thumbnails/howthumb.jpg">
+					<span class="arrow">HOW MAG</span></a>
+				</div>
+		
+				<div class="fart john" >
+					<a href="playboy.html"><img class="lil" src="/static/assets/images/project_thumbnails/pbthumb.jpg">
+					<span class="arrow">PLAYBOY</span></a>
+				</div>
+		
+				<div class="fart john" >
+					<a href="realdeal.html"><img class="lil" src="/static/assets/images/project_thumbnails/trdthumb.jpg">
+					<span class="arrow">THE REAL DEAL</span></a>
+				</div>
+		
+				<div class="fart john" >
+					<a href="newrepublic2.html"><img class="lil" src="/static/assets/images/project_thumbnails/nnrrthumb.jpg">
+					<span class="arrow">NEW REPUBLIC</span></a>
+				</div>
+		
+				<div class="fart john" >
+					<a href="yoocon3.html"><img class="lil" src="/static/assets/images/project_thumbnails/ykthumb.gif">
+					<span class="arrow">SHARING</span></a>
+				</div>
+		
+				<div class="fart john" >
+					<a href="visionary.html"><img class="lil" src="/static/assets/images/project_thumbnails/tvthumb2.jpg">
+					<span class="arrow">THE VISIONARY</span></a>
+				</div>
+	
+			</div>
+	
+		
+			<div id="footer">
+				<img src="/static/assets/images/project_thumbnails/squiggle.jpg" class="displayed" id="squiggle" alt = "squiggle" >
+				<br>
+				<br>
+				<footer> &#169; COPYRIGHT <script type="text/javascript">
+					<!-- Begin
+					var time=new Date();
+					var year=time.getYear();
+					if (year < 2000)
+					year = year + 1902;
+					document.write(year);
+					// End -->
+				
+					</script><img src="/static/assets/images/project_thumbnails/spex2.gif" class="displayed" id="specs" alt = "glasses" /><div id="future">(THE FUTURE)</div>
+				</footer>
+			</div>
+			
+			<br><br>
+		
+	    </div>
+	    <br>
+	</body>
+</html>

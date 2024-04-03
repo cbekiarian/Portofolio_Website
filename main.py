@@ -258,7 +258,7 @@ def delete_post(post_id):
 
 @app.route("/about")
 def about():
-    return render_template("about.html", current_user=current_user)
+    return render_template("index.html", current_user=current_user)
 
 
 @app.route("/contact", methods=["GET", "POST"])
