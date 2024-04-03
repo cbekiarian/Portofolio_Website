@@ -1,20 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		
-		<!-- Setting the metadata    -->
-		<meta charset="utf-8" />
-		<meta name="author" content="Christos Bekiarian"/>
-		<meta name="description" content="Personal portofolio website" />
-		<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-		<!-- Linking the CSS and icon    -->
-		<title> Bekiarian Portofolio</title>
-		<link rel="stylesheet" type="text/css" href="/static/css/styles.css" />
-		<link rel="tab icon"  type="image/x-icon"  href="/static/assets/favicon.ico"/>
-		
-	</head>
+<!--Setting metadata and importing styles-->
+{% include "header.html" %}
 
     <!-- Body content begins  -->
 	<body>
@@ -43,9 +28,9 @@
 			<!-- First column -->
 			<div id="c1">
 		
-				<div class="fart  idle"  >
-					<a href="audrey.html"><img class="lil" data-original="/static/assets/images/audthumb.jpg" src="/static/assets/images/project_thumbnails/audthumb.jpg" style="display: inline;">
-					<span class="arrow">AUDREY</span></a>
+				<div class="fart  john"  >
+					<a href="{{url_for('chess')}}"><img class="lil"  src="/static/assets/images/project_thumbnails/chess_bot.png" style="display: inline;">
+					<span class="arrow">CHESS BOT</span></a>
 				</div>
 		
 				<div class="fart john">
@@ -63,40 +48,23 @@
 					<span class="arrow">INSTITUTIONAL INVESTOR</span></a>
 				</div>
 		
-				<div class="fart john" >
-					<a href="fp.html"><img class="lil" src="/static/assets/images/project_thumbnails/tpthumb2.jpg">
-					<span class="arrow">FINANCIAL POST</span></a>
-				</div>
-		
-				<div class="fart john" >
-					<a href="contently.html"><img class="lil" src="/static/assets/images/project_thumbnails/ctthumb.jpg">
-					<span class="arrow">CONTENTLY</span></a>
-				</div>
-		
-				<div class="fart john" >
-					<a href="chariots.html"><img class="lil" src="/static/assets/images/project_thumbnails/cohthumb.jpg">
-					<span class="arrow">CHARRIOTS OF HOPE</span></a>
-				</div>
-		
-				<div class="fart john" >
-					<a href="monocle2.html"><img class="lil" src="/static/assets/images/project_thumbnails/mcthumb.jpg">
-					<span class="arrow">MONOCLE 86</span></a>
-				</div>
+
 			</div>
 			
 			<!-- Second column -->
 			<div id="c2">
+				
+				<div class="fart idle" >
+					<a href="peach.html"><img class="lil" src="/static/assets/images/project_thumbnails/peachthumb.jpg">
+					<span class="arrow">PEACHY</span></a>
+				</div>
 		
 				<div class="fart john" >
 					<a href="iron.html"><img class="lil" src="/static/assets/images/project_thumbnails/ironthumb.jpg">
 					<span class="arrow">IRONMAN</span></a>
 				</div>
 		
-				<div class="fart idle" >
-					<a href="peach.html"><img class="lil" src="/static/assets/images/project_thumbnails/peachthumb.jpg">
-					<span class="arrow">PEACHY</span></a>
-				</div>
-		
+			
 		
 				<div class="fart john" >
 					<a href="pride.html"><img class="lil" src="/static/assets/images/project_thumbnails/pridethumb.jpg">
@@ -107,26 +75,7 @@
 					<a href="thinkers.html"><img class="lil" src="/static/assets/images/project_thumbnails/phthumb.gif">
 					<span class="arrow">THINKERS</span></a>
 				</div>
-		
-				<div class="fart john" >
-					<a href="pennlaw.html"><img class="lil" src="/static/assets/images/project_thumbnails/bithumb2.jpg">
-					<span class="arrow">PENN LAW JOURNAL</span></a>
-				</div>
-		
-				<div class="fart john" >
-					<a href="literary.html"><img class="lil" src="/static/assets/images/project_thumbnails/llthumb2.jpg">
-					<span class="arrow">COASTAL LIVING</span></a>
-				</div>
-		
-				<div class="fart john" >
-					<a href="atlanta.html"><img class="lil" src="/static/assets/images/project_thumbnails/rrthumb.gif">
-					<span class="arrow">ATLANTA MAGAZINE</span></a>
-				</div>
-		
-				<div class="fart john" >
-					<a href="rockefeller.html"><img class="lil" src="/static/assets/images/project_thumbnails/rfthumb.jpg">
-					<span class="arrow">ROCKEFELLER U.</span></a>
-				</div>
+				
 			</div>
 			
 	
@@ -152,26 +101,7 @@
 					<span class="arrow">BYU MAGAZINE</span></a>
 				</div>
 		
-				<div class="fart john" >
-					<a href="ccm.html"><img class="lil" src="/static/assets/images/project_thumbnails/ccmthumb.jpg">
-					<span class="arrow">CARD CONNECT MURAL</span></a>
-				</div>
-		
-		
-				<div class="fart john" >
-					<a href="portraits.html"><img class="lil" src="/static/assets/images/project_thumbnails/alexthumb2.jpg">
-					<span class="arrow">PORTRAITS</span></a>
-				</div>
-		
-				<div class="fart john" >
-					<a href="wallstreetjournal.html"><img class="lil" src="/static/assets/images/project_thumbnails/wsthumb.jpg">
-					<span class="arrow">WALLSTREET JOURNAL</span></a>
-				</div>
-		
-				<div class="fart john" >
-					<a href="mural2.html"><img class="lil" src="/static/assets/images/project_thumbnails/bmthumb.jpg">
-					<span class="arrow">SPIRIT MURAL</span></a>
-				</div>
+
 	
 			</div>
 			
@@ -197,50 +127,9 @@
 					<a href="playboy.html"><img class="lil" src="/static/assets/images/project_thumbnails/pbthumb.jpg">
 					<span class="arrow">PLAYBOY</span></a>
 				</div>
-		
-				<div class="fart john" >
-					<a href="realdeal.html"><img class="lil" src="/static/assets/images/project_thumbnails/trdthumb.jpg">
-					<span class="arrow">THE REAL DEAL</span></a>
-				</div>
-		
-				<div class="fart john" >
-					<a href="newrepublic2.html"><img class="lil" src="/static/assets/images/project_thumbnails/nnrrthumb.jpg">
-					<span class="arrow">NEW REPUBLIC</span></a>
-				</div>
-		
-				<div class="fart john" >
-					<a href="yoocon3.html"><img class="lil" src="/static/assets/images/project_thumbnails/ykthumb.gif">
-					<span class="arrow">SHARING</span></a>
-				</div>
-		
-				<div class="fart john" >
-					<a href="visionary.html"><img class="lil" src="/static/assets/images/project_thumbnails/tvthumb2.jpg">
-					<span class="arrow">THE VISIONARY</span></a>
-				</div>
+
 	
 			</div>
-	
+		</div>
+{% include "footer.html" %}
 		
-			<div id="footer">
-				<img src="/static/assets/images/project_thumbnails/squiggle.jpg" class="displayed" id="squiggle" alt = "squiggle" >
-				<br>
-				<br>
-				<footer> &#169; COPYRIGHT <script type="text/javascript">
-					<!-- Begin
-					var time=new Date();
-					var year=time.getYear();
-					if (year < 2000)
-					year = year + 1902;
-					document.write(year);
-					// End -->
-				
-					</script><img src="/static/assets/images/project_thumbnails/spex2.gif" class="displayed" id="specs" alt = "glasses" /><div id="future">(THE FUTURE)</div>
-				</footer>
-			</div>
-			
-			<br><br>
-		
-	    </div>
-	    <br>
-	</body>
-</html>

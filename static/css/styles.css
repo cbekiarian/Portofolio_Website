@@ -1,5 +1,7 @@
 
-#body {background-color: white;}
+body {background-color: white;
+
+       }
 
 
 @font-face {
@@ -648,12 +650,32 @@ font-family: "Leitura", "Helvetica"; text-decoration:none; color:dark grey;
 
 }*/
 
-h1 {
+h3 {
 	font: 11px Helvetica, sans-serif; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
 }
 
+.iframe-container {
 
-h3 {
+width: 1000px; /* Set the width */
+height: 1000px; /* Set the height */
+overflow: hidden; /* Hide overflow */
+position: relative; /* Positioning context for absolute positioning */
+left: -5%;
+background-color : pink;
+
+
+}
+
+iframe {
+
+width: 220%; /* Full width */
+height: 120%; /* Full height */
+position: absolute; /* Position within container */
+top: -135px; /* Align to top */
+left: -62px; /* Align to left */
+}
+
+h1 {
 font-family: "Leitura", "Helvetica";
 text-decoration:none;
 color:dark grey;
@@ -686,7 +708,7 @@ width: 100%;
 #wrapper {
 width: 1030px;
 margin: 0 auto;
-/*height: 1900px;*/
+
 }
 
 #header {
