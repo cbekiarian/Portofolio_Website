@@ -9,7 +9,6 @@ from sqlalchemy.orm import relationship, DeclarativeBase, Mapped, mapped_column
 from sqlalchemy import Integer, String, Text
 from functools import wraps
 from werkzeug.security import generate_password_hash, check_password_hash
-from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 import os
 
 
@@ -17,14 +16,23 @@ app = Flask(__name__)
 key =os.environ.get('FLASK_KEY')
 app.config['SECRET_KEY'] = key
 
-@app.route('/chess', methods = ["GET","POST"])
-def chess():
-
-    return render_template("chess.html")
 
 @app.route('/')
 def home():
     return render_template("index.html")
+
+@app.route('/chess', methods = ["GET","POST"])
+def chess():
+
+    pieces ='white'
+    pieces = request.args.get('pieces')
+    return render_template("chess.html", pieces = pieces)
+
+@app.route('/flight-deals', methods=["GET","POST"])
+def flights():
+    return render_template("flights.html")
+
+
 
 if __name__ == "__main__":
     app.run(debug=True, port=5001)
