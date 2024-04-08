@@ -1,4 +1,6 @@
+{% from "bootstrap5/form.html" import render_form %}
 {% include "header.html" %}
+
 <body>
     
     <div id="wrapper">
@@ -21,11 +23,34 @@
             Describe your ideal flights , and find if there is a match in the next 6 months
             </p>
             <br><br>
-            <br><br><br><br>
+            {%if flag == 0 :%}
+                 {{render_form(form)}}
+            {%elif flag == 1:%}
+            <p>The cheapest direct round trip flights are between:<br>
+               {% if form.flights_found != None:%}
+                   {%for res in form.flights_found:%}
+    
+                   {{res.origin_airport}}  and {{res.destination_airport}}  with a total price of  {{res.price}}
+                    and travel dates of {{res.departure_date}} and {{res.return_date}}
+                    <br>
+                   {% endfor%}
+                {%endif%}
+                     {% with messages = get_flashed_messages() %}
+                          {% if messages %}
+                          {% for message in messages %}
+                          <p class="flash">{{ message }}</p>
+                          {% endfor %}
+                          {% endif %}
+                          {% endwith %}
+                </p>
                 
+                {% endif %}
+            <br><br>
+            <br><br><br><br>
+            
             
           
-            </p>
+            
         </div>
         
 

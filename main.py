@@ -9,13 +9,15 @@ from sqlalchemy.orm import relationship, DeclarativeBase, Mapped, mapped_column
 from sqlalchemy import Integer, String, Text
 from functools import wraps
 from werkzeug.security import generate_password_hash, check_password_hash
+from flights.FlightFinder import SearchFlights
+from forms.airplane_form import AirplaneForm
 import os
 
 
 app = Flask(__name__)
 key =os.environ.get('FLASK_KEY')
 app.config['SECRET_KEY'] = key
-
+Bootstrap5(app)
 
 @app.route('/')
 def home():
@@ -24,13 +26,22 @@ def home():
 @app.route('/chess', methods = ["GET","POST"])
 def chess():
 
-    pieces ='white'
+    pieces = 'white'
     pieces = request.args.get('pieces')
     return render_template("chess.html", pieces = pieces)
 
 @app.route('/flight-deals', methods=["GET","POST"])
 def flights():
-    return render_template("flights.html")
+    form = AirplaneForm()
+    if form.validate_on_submit():
+        flights_info = SearchFlights(form.origin.data, form.destination.data, form.max_price.data)
+        if (flights_info.flights_found == None ):
+            flash("Invalid city entered")
+        elif (len(flights_info.flights_found) == 0):
+            flash("No flights under that price found")
+
+        return render_template("flights.html", form = flights_info, flag=1)
+    return render_template("flights.html", form = form, flag = 0)
 
 
 
