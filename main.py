@@ -15,7 +15,7 @@ import os
 
 
 app = Flask(__name__)
-key =os.environ.get('FLASK_KEY')
+key = os.environ.get('FLASK_KEY')
 app.config['SECRET_KEY'] = key
 Bootstrap5(app)
 
@@ -46,4 +46,4 @@ def flights():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5001)
+    app.run(debug=False, port=5001)

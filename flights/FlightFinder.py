@@ -1,9 +1,9 @@
 import requests
 from datetime import datetime, timedelta
+import os
 
 TEQUILA_ENDPOINT = "https://tequila-api.kiwi.com"
-TEQUILA_API_KEY = "HqEJYchHQlLJZPtrbCukNchGYPF5L7tZ"
-import json
+TEQUILA_API_KEY = os.environ.get('TEQUILA_KEY')
 
 class SearchFlights:
     def __init__(self, origin, destination, max_price):
