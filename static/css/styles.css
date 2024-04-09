@@ -744,6 +744,8 @@ color: black;
 background-color: #D3D3D3;
 }
 
+#sneakyheader {
+display: none;}
 
 
 .topnav
@@ -805,48 +807,528 @@ footer {
 
 /* - - - - PORTOLIO PEICES*/
 
+	#next
+	{
+	height: 260px;
+	}
 
+	#next a span {
+	margin: 17;
+	display: none;
+	}
 
-	.idle
+	#next a:hover span {
+	display: block;
+	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
+	z-index: 100;
+	   }
+
+	.small_icon
 	{
 	height: 210px;
 	width: 217px;
 	}
 
-	.idle a span {
+	.small_icon a span {
 	margin: 17px;
 	display: none;
 	}
 
-	.idle a:hover span {
+	.small_icon a:hover span {
 	display: block;
 	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
 	z-index: 100px;
 	   }
 
 
+	#unloved
+	{
+	height: 190px;
+	}
+
+	#unloved a span {
+	margin: 17;
+	display: none;
+	}
+
+	#unloved a:hover span {
+	display: block;
+	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
+	z-index: 100;
+	   }
+
+
+	#tiny
+	{
+	height: 130px;
+	}
+
+	#tiny a span {
+	margin: 17;
+	display: none;
+	}
+
+	#tiny a:hover span {
+	display: block;
+	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
+	z-index: 100;
+	   }
 
 
 
-	.john
+	#awards
+	{
+	height: 295px;
+	}
+
+	#awards a span {
+	margin: 17;
+	display: none;
+	}
+
+	#awards a:hover span {
+	display: block;
+	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
+	z-index: 100;
+	   }
+
+
+	#east
+	{
+	height: 212px;
+	}
+
+	#east a span {
+	margin: 17;
+	display: none;
+	}
+
+	#east a:hover span {
+	display: block;
+	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
+	z-index: 100;
+	   }
+
+	#hat
+	{
+	height: 212px;
+	}
+
+	#hat a span {
+	margin: 17;
+	display: none;
+	}
+
+	#hat a:hover span {
+	display: block;
+	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
+	z-index: 100;
+	   }
+
+	#foam
+	{
+	height: 283px;
+	}
+
+	#foam a span {
+	margin: 17;
+	display: none;
+	}
+
+	#foam a:hover span {
+	display: block;
+	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
+	z-index: 100;
+	   }
+
+	      #phone
+	{
+	height: 340px;
+	}
+
+	#phone a span {
+	margin: 17;
+	display: none;
+	}
+
+	#phone a:hover span {
+	display: block;
+	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
+	z-index: 100;
+	   }
+
+	.big_icon
 	{
 	height: 262px;
 	width : 217px;
 	/* margin: 0 0 50 0; */
 	}
 
-	.john a span {
+	.big_icon a span {
 	margin: 17px;
 	display: none;
 	}
 
-	.john a:hover span {
+	.big_icon a:hover span {
 	display: block;
 	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
 	z-index: 100px;
 	   }
 
+	            #see
+	{
+	height: 190px;
+	}
 
+	#see a span {
+	margin: 17px;
+	display: none;
+	}
+
+	#see a:hover span {
+	display: block;
+	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
+	z-index: 100;
+	   }
+
+	#e
+	{
+	height: 200px;
+	}
+
+	#e a span {
+	margin: 17;
+	display: none;
+	}
+
+	#e a:hover span {
+	display: block;
+	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
+	z-index: 100;
+	   }
+
+	#honey
+	{
+	height: 289px;
+	}
+
+	#honey a span {
+	margin: 17;
+	display: none;
+	}
+
+	#honey a:hover span {
+	display: block;
+	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
+	z-index: 100;
+	   }
+
+	      #church
+	{
+	height: 180px;
+	}
+
+	#church a span {
+	margin: 17;
+	display: none;
+	}
+
+	#church a:hover span {
+	display: block;
+	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
+	z-index: 100;
+	   }
+
+
+	      #sin
+	{
+	height: 311px;
+	}
+
+	#sin a span {
+	margin: 17;
+	display: none;
+	}
+
+	#sin a:hover span {
+	display: block;
+	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
+	z-index: 100;
+	   }
+
+	        #blink
+	{
+	height: 210px;
+	}
+
+	#blink a span {
+	margin: 17;
+	display: none;
+	}
+
+	#blink a:hover span {
+	display: block;
+	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
+	z-index: 100;
+	   }
+
+	    #scoop
+	{
+	height: 379px;
+	}
+
+	#scoop a span {
+	margin: 17;
+	display: none;
+	}
+
+	#scoop a:hover span {
+	display: block;
+	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
+	z-index: 100;
+	   }
+
+	   #animal
+	{
+	height: 280px;
+	}
+
+	#animal a span {
+	margin: 17;
+	display: none;
+	}
+
+	#animal a:hover span {
+	display: block;
+	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
+	z-index: 100;
+	   }
+
+	   #foxes
+	{
+	height: 158px;
+	}
+
+	#foxes a span {
+	margin: 17;
+	display: none;
+	}
+
+	#foxes a:hover span {
+	display: block;
+	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
+	z-index: 100;
+	   }
+
+	      #balloon
+	{
+	height: 322px;
+	}
+
+	#balloon a span {
+	margin: 17;
+	display: none;
+	}
+
+	#balloon a:hover span {
+	display: block;
+	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
+	z-index: 100;
+	   }
+
+	         #curses
+	{
+	height: 342px;
+	}
+
+	#curses a span {
+	margin: 17;
+	display: none;
+	}
+
+	#curses a:hover span {
+	display: block;
+	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
+	z-index: 100;
+	   }
+
+	        #sinter
+	{
+	height: 310px;
+	}
+
+	#sinter a span {
+	margin: 17;
+	display: none;
+	}
+
+	#sinter a:hover span {
+	display: block;
+	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
+	z-index: 100px;
+	   }
+	.project {padding: 0px 0px 50px 0px;}
+
+	           #cloud
+	{
+	height: 180px;
+	}
+
+	#cloud a span {
+	margin: 17px;
+	display: none;
+	}
+
+	#cloud a:hover span {
+	display: block;
+	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
+	z-index: 100;
+	   }
+
+	              #pissed
+	{
+	height: 300px;
+	}
+
+	#pissed a span {
+	margin: 17;
+	display: none;
+	}
+
+	#pissed a:hover span {
+	display: block;
+	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
+	z-index: 100;
+	   }
+
+	#sketch
+	{
+	height: 280px;
+	}
+
+	#sketch a span {
+	margin: 17;
+	display: none;
+	}
+
+	#sketch a:hover span {
+	display: block;
+	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
+	z-index: 100;
+	   }
+
+	                   #paper
+	{
+	height: 250px;
+	}
+
+	#paper a span {
+	margin: 17;
+	display: none;
+	}
+
+	#paper a:hover span {
+	display: block;
+	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
+	z-index: 100;
+	   }
+
+	                     #denial
+	{
+	height: 160px;
+	}
+
+	#denial a span {
+	margin: 17;
+	display: none;
+	}
+
+	#denial a:hover span {
+	display: block;
+	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
+	z-index: 100;
+	   }
+
+
+	     #tech
+	{
+	height: 300px;
+	}
+
+	#tech a span {
+	margin: 17;
+	display: none;
+	}
+
+	#tech a:hover span {
+	display: block;
+	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
+	z-index: 100;
+	   }
+
+	    	#mob
+	{
+	height: 220px;
+	}
+
+	#mob a span {
+	margin: 17;
+	display: none;
+	}
+
+	#mob a:hover span {
+	display: block;
+	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
+	z-index: 100;
+	   }
+
+	#secure
+	{
+	height: 190px;
+	}
+
+	#secure a span {
+	margin: 17;
+	display: none;
+	}
+
+	#secure a:hover span {
+	display: block;
+	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
+	z-index: 100;
+	   }
+
+	#holstee
+	{
+	height: 230px;
+	}
+
+	#holstee a span {
+	margin: 17;
+	display: none;
+	}
+
+	#holstee a:hover span {
+	display: block;
+	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
+	z-index: 100;
+	   }
+
+	   #bfa
+	{
+	height: 263px;
+	}
+
+	#bfa a span {
+	margin: 17;
+	display: none;
+	}
+
+	#bfa a:hover span {
+	display: block;
+	font: 11px Helvetica, sans-serif; text-align: center; text-decoration:none; font-weight:bold; color:dark grey; letter-spacing: 0.2em;
+	z-index: 100;
+	   }
 
 /* - - - - PORTOLIO PEICES*/
 

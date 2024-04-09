@@ -1,0 +1,52 @@
+{% from "bootstrap5/form.html" import render_form %}
+{% include "header.html" %}
+<body>
+    
+    <div id="wrapper">
+        <div id="header">
+            <br>
+            <p><a href="{{url_for('home')}}" class="homelink">Christos B - Projects</a></p>
+        </div>
+        
+        <div id="nav">
+            <a href="{{url_for('home')}}" class="topnav">Projects</a>
+            <a href="contact.html" class="topnav">About</a>
+            <a href="news.html" class="topnav">FAQ</a>
+        </div>
+        <div id="middle">
+            <h1>STOCK ALERT</h1>
+                <h2>Check the price change in the precious days combined with the latest news &#x1F609; </h2>
+            <p>
+            Just enter a stock name
+            </p>
+            <br><br>
+            <p>
+            {% if flag == 0: %}
+                 {{render_form(form)}}
+            {% else: %}
+                The last two business days the price of  {{ form.stock}} has gone from  {{ form.prices[1]|float|round(3)}} to {{ form.prices[0]|float|round(3)}}
+                <br>which is a <script>
+
+                  var from_price  =  {{ form.prices[1]}};
+                  var to_price  = {{ form.prices[0]}};
+                  var res = (to_price - from_price)*100/from_price;
+                document.write((Math.round(res * 100) / 100).toFixed(2));
+</script>% difference<br>
+                The most important news during that period are
+                {%for articles in form.news:%}
+            <br><h2>{{articles.title}}</h2>
+               <br> <h3>{{articles.description}}</h3>
+                <br> <p>{{articles.url}}</p>
+                {% endfor %}
+                
+            {% endif %}
+            </p>
+            <br>
+            
+        </div>
+        
+
+
+    </div>
+    <br>
+{% include "footer.html" %}

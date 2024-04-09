@@ -9,5 +9,8 @@ class AirplaneForm(FlaskForm):
     origin = StringField("Departure city", validators=[DataRequired()])
     destination = StringField("Destination city", validators=[DataRequired()])
     max_price = IntegerField("Max price of trip", validators=[DataRequired()])
+    submit = SubmitField("Submit")
 
+class StockForm(FlaskForm):
+    stock_name = StringField("Stock Name", validators=[DataRequired()])
     submit = SubmitField("Submit")
