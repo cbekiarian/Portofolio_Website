@@ -21,6 +21,17 @@ def chess():
     pieces = request.args.get('pieces')
     return render_template("chess.html", pieces = pieces)
 
+
+@app.route('/thesis', methods = ["GET","POST"])
+def thesis():
+
+
+    return render_template("thesis.html")
+
+
+
+
+
 @app.route('/flight-deals', methods=["GET","POST"])
 def flights():
     form = AirplaneForm()
@@ -37,4 +48,4 @@ def flights():
 
 
 if __name__ == "__main__":
-    app.run(debug=False, port=5001)
+    app.run(debug=True, port=5001)
